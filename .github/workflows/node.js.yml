@@ -35,7 +35,7 @@ jobs:
     - uses: SonarSource/sonarcloud-github-action@v1.4
       env:
         # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - run: sonar-scanner
         -Dsonar.host.url=${{ secrets.SONAR_URL }}
         -Dsonar.login=${{ secrets.SONAR_TOKEN }}
