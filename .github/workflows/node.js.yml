@@ -39,7 +39,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
         SONAR_URL: ${{ secrets.SONAR_URL }}
-    - run: sonar-scanner
+    - run: sonar-scanner -X 
         -Dsonar.host.url=$SONAR_URL
         -Dsonar.login=$SONAR_TOKEN
         -Dsonar.projectKey=$PROJECT_KEY
